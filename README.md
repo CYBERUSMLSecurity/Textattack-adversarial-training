@@ -149,6 +149,13 @@ You can customize the script by modifying:
 
 ---
 
+## Challenges Faced
+
+1] numpy python dependecy [3.12] - Apparently the numpy package is not compatuble with the 3.12 version of python which gave errors while running the script
+   Solution - After a while struggling to find solution I found a solution at https://github.com/google/sentencepiece/issues/971 which suggested to downgrade the python version to 3.10 which eventually helped.
+
+---
+
 ## Future Work
 1. Experiment with adversarial training techniques available in TextAttack.  
 2. Fine-tune other transformer-based models (e.g., BERT, DistilBERT).  
