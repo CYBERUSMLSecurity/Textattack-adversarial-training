@@ -1,0 +1,237 @@
+(textattack-venv310) root@LENOVOLOQ:~/model-adv-train# python3 script.py
+2024-12-01 17:31:27.784368: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-01 17:31:27.796241: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1733074287.807931    5043 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1733074287.811283    5043 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-12-01 17:31:27.826605: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+textattack: Loading datasets dataset rotten_tomatoes, split train.
+textattack: Loading datasets dataset rotten_tomatoes, split test.
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[nltk_data] Downloading package omw-1.4 to /root/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+Starting epoch 1/5
+textattack: Writing logs to ./outputs/2024-12-01-17-31-40-004585/train_log.txt.
+textattack: Wrote original training args to ./outputs/2024-12-01-17-31-40-004585/training_args.json.
+/root/model-adv-train/textattack-venv310/lib/python3.10/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+textattack: ***** Running training *****
+textattack:   Num examples = 8530
+textattack:   Num epochs = 5
+textattack:   Num clean epochs = 5
+textattack:   Instantaneous batch size per device = 8
+textattack:   Total train batch size (w. parallel, distributed & accumulation) = 8
+textattack:   Gradient accumulation steps = 1
+textattack:   Total optimization steps = 5335
+textattack: ==========================================================
+textattack: Epoch 1
+textattack: Running clean epoch 1/5
+Loss 0.42922: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:39<00:00,  2.06it/s]
+textattack: Train accuracy: 78.52%
+textattack: Eval accuracy: 86.77%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 2
+textattack: Running clean epoch 2/5
+Loss 0.33668: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:39<00:00,  2.05it/s]
+textattack: Train accuracy: 90.69%
+textattack: Eval accuracy: 89.12%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 3
+textattack: Running clean epoch 3/5
+Loss 0.27343: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:39<00:00,  2.06it/s]
+textattack: Train accuracy: 94.71%
+textattack: Eval accuracy: 88.18%
+textattack: ==========================================================
+textattack: Epoch 4
+textattack: Running clean epoch 4/5
+Loss 0.22741: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:39<00:00,  2.05it/s]
+textattack: Train accuracy: 97.01%
+textattack: Eval accuracy: 88.65%
+textattack: ==========================================================
+textattack: Epoch 5
+textattack: Running clean epoch 5/5
+Loss 0.19353: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:40<00:00,  2.05it/s]
+textattack: Train accuracy: 98.28%
+textattack: Eval accuracy: 88.84%
+textattack: Wrote README to ./outputs/2024-12-01-17-31-40-004585/README.md.
+Starting epoch 2/5
+textattack: Writing logs to ./outputs/2024-12-01-17-31-40-004585/train_log.txt.
+textattack: Wrote original training args to ./outputs/2024-12-01-17-31-40-004585/training_args.json.
+textattack: ***** Running training *****
+textattack:   Num examples = 8530
+textattack:   Num epochs = 5
+textattack:   Num clean epochs = 5
+textattack:   Instantaneous batch size per device = 8
+textattack:   Total train batch size (w. parallel, distributed & accumulation) = 8
+textattack:   Gradient accumulation steps = 1
+textattack:   Total optimization steps = 5335
+textattack: ==========================================================
+textattack: Epoch 1
+textattack: Running clean epoch 1/5
+Loss 0.00867: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:38<00:00,  2.06it/s]
+textattack: Train accuracy: 98.46%
+textattack: Eval accuracy: 88.65%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 2
+textattack: Running clean epoch 2/5
+Loss 0.01296: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:40<00:00,  2.05it/s]
+textattack: Train accuracy: 98.92%
+textattack: Eval accuracy: 88.56%
+textattack: ==========================================================
+textattack: Epoch 3
+textattack: Running clean epoch 3/5
+Loss 0.01459: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:41<00:00,  2.05it/s]
+textattack: Train accuracy: 99.27%
+textattack: Eval accuracy: 87.71%
+textattack: ==========================================================
+textattack: Epoch 4
+textattack: Running clean epoch 4/5
+Loss 0.01500: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:39<00:00,  2.05it/s]
+textattack: Train accuracy: 99.34%
+textattack: Eval accuracy: 88.37%
+textattack: ==========================================================
+textattack: Epoch 5
+textattack: Running clean epoch 5/5
+Loss 0.01519: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:41<00:00,  2.04it/s]
+textattack: Train accuracy: 99.53%
+textattack: Eval accuracy: 88.56%
+textattack: Wrote README to ./outputs/2024-12-01-17-31-40-004585/README.md.
+Starting epoch 3/5
+textattack: Writing logs to ./outputs/2024-12-01-17-31-40-004585/train_log.txt.
+textattack: Wrote original training args to ./outputs/2024-12-01-17-31-40-004585/training_args.json.
+textattack: ***** Running training *****
+textattack:   Num examples = 8530
+textattack:   Num epochs = 5
+textattack:   Num clean epochs = 5
+textattack:   Instantaneous batch size per device = 8
+textattack:   Total train batch size (w. parallel, distributed & accumulation) = 8
+textattack:   Gradient accumulation steps = 1
+textattack:   Total optimization steps = 5335
+textattack: ==========================================================
+textattack: Epoch 1
+textattack: Running clean epoch 1/5
+Loss 0.00190: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:41<00:00,  2.04it/s]
+textattack: Train accuracy: 99.36%
+textattack: Eval accuracy: 88.37%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 2
+textattack: Running clean epoch 2/5
+Loss 0.00334: 100%|██████████████████████████████████████████████████████████████████████████| 1067/1067 [08:43<00:00,  2.04it/s]
+textattack: Train accuracy: 99.41%
+textattack: Eval accuracy: 87.71%
+textattack: ==========================================================
+textattack: Epoch 3
+textattack: Running clean epoch 3/5
+Loss 0.00383: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:43<00:00,  2.04it/s]
+textattack: Train accuracy: 99.68%
+textattack: Eval accuracy: 88.56%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 4
+textattack: Running clean epoch 4/5
+Loss 0.00440: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:44<00:00,  2.04it/s]
+textattack: Train accuracy: 99.62%
+textattack: Eval accuracy: 88.84%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 5
+textattack: Running clean epoch 5/5
+Loss 0.00474: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:43<00:00,  2.04it/s]
+textattack: Train accuracy: 99.72%
+textattack: Eval accuracy: 88.65%
+textattack: Wrote README to ./outputs/2024-12-01-17-31-40-004585/README.md.
+Starting epoch 4/5
+textattack: Writing logs to ./outputs/2024-12-01-17-31-40-004585/train_log.txt.
+textattack: Wrote original training args to ./outputs/2024-12-01-17-31-40-004585/training_args.json.
+textattack: ***** Running training *****
+textattack:   Num examples = 8530
+textattack:   Num epochs = 5
+textattack:   Num clean epochs = 5
+textattack:   Instantaneous batch size per device = 8
+textattack:   Total train batch size (w. parallel, distributed & accumulation) = 8
+textattack:   Gradient accumulation steps = 1
+textattack:   Total optimization steps = 5335
+textattack: ==========================================================
+textattack: Epoch 1
+textattack: Running clean epoch 1/5
+Loss 0.00011: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:41<00:00,  2.05it/s]
+textattack: Train accuracy: 99.94%
+textattack: Eval accuracy: 89.12%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 2
+textattack: Running clean epoch 2/5
+Loss 0.00081: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:42<00:00,  2.04it/s]
+textattack: Train accuracy: 99.66%
+textattack: Eval accuracy: 85.46%
+textattack: ==========================================================
+textattack: Epoch 3
+textattack: Running clean epoch 3/5
+Loss 0.00151: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:43<00:00,  2.04it/s]
+textattack: Train accuracy: 99.58%
+textattack: Eval accuracy: 89.12%
+textattack: ==========================================================
+textattack: Epoch 4
+textattack: Running clean epoch 4/5
+Loss 0.00187: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:44<00:00,  2.03it/s]
+textattack: Train accuracy: 99.71%
+textattack: Eval accuracy: 88.93%
+textattack: ==========================================================
+textattack: Epoch 5
+textattack: Running clean epoch 5/5
+Loss 0.00223: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:41<00:00,  2.05it/s]
+textattack: Train accuracy: 99.67%
+textattack: Eval accuracy: 89.02%
+textattack: Wrote README to ./outputs/2024-12-01-17-31-40-004585/README.md.
+Starting epoch 5/5
+textattack: Writing logs to ./outputs/2024-12-01-17-31-40-004585/train_log.txt.
+textattack: Wrote original training args to ./outputs/2024-12-01-17-31-40-004585/training_args.json.
+textattack: ***** Running training *****
+textattack:   Num examples = 8530
+textattack:   Num epochs = 5
+textattack:   Num clean epochs = 5
+textattack:   Instantaneous batch size per device = 8
+textattack:   Total train batch size (w. parallel, distributed & accumulation) = 8
+textattack:   Gradient accumulation steps = 1
+textattack:   Total optimization steps = 5335
+textattack: ==========================================================
+textattack: Epoch 1
+textattack: Running clean epoch 1/5
+Loss 0.00060: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:41<00:00,  2.05it/s]
+textattack: Train accuracy: 99.64%
+textattack: Eval accuracy: 87.24%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 2
+textattack: Running clean epoch 2/5
+Loss 0.00128: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:43<00:00,  2.04it/s]
+textattack: Train accuracy: 99.48%
+textattack: Eval accuracy: 88.27%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 3
+textattack: Running clean epoch 3/5
+Loss 0.00148: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:41<00:00,  2.05it/s]
+textattack: Train accuracy: 99.80%
+textattack: Eval accuracy: 89.40%
+textattack: Best score found. Saved model to ./outputs/2024-12-01-17-31-40-004585/best_model/
+textattack: ==========================================================
+textattack: Epoch 4
+textattack: Running clean epoch 4/5
+Loss 0.00167: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:42<00:00,  2.04it/s]
+textattack: Train accuracy: 99.81%
+textattack: Eval accuracy: 88.74%
+textattack: ==========================================================
+textattack: Epoch 5
+textattack: Running clean epoch 5/5
+Loss 0.00180: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1067/1067 [08:42<00:00,  2.04it/s]
+textattack: Train accuracy: 99.82%
+textattack: Eval accuracy: 89.12%
+textattack: Wrote README to ./outputs/2024-12-01-17-31-40-004585/README.md.
+Training complete.
